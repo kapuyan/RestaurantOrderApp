@@ -9,7 +9,7 @@ class RestaurantOrderAdapter ( private var list: MutableList <Order>, private va
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item, parent, false)
+        val view = inflater.inflate(R.layout.activity_order, parent, false)
         return OrderViewHolder(view)
     }
 

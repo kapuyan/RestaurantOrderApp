@@ -14,7 +14,7 @@
         tools:text="Item name" />
 
     <TextView
-        android:id="@+id/ageTxt"
+        android:id="@+id/dishTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"

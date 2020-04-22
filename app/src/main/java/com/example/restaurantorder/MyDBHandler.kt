@@ -8,16 +8,17 @@ import android.database.sqlite.SQLiteOpenHelper
 class MyDBHandler(context: Context, name: String?,
                   factory: SQLiteDatabase.CursorFactory?, version: Int) : SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
     companion object {
-        private val DATABASE_VERSION = 1
+        private val DATABASE_VERSION = 3
         private val DATABASE_NAME = "wordsDB.db"
         val TABLE_WORDS = "words_table"
         val COLUMN_ID = "_id"
         val COLUMN_WORD = "word"
-        val COLUMN_NAME = "name"
+        //val COLUMN_NAME = "name"
+        val Name ="Name"
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        val CREATE_WORDS_TABLE = ("CREATE TABLE $TABLE_WORDS ($COLUMN_ID INTEGER PRIMARY KEY, $COLUMN_WORD TEXT, $COLUMN_NAME TEXT );")
+        val CREATE_WORDS_TABLE = ("CREATE TABLE $TABLE_WORDS ($COLUMN_ID INTEGER PRIMARY KEY, $COLUMN_WORD TEXT, $Name TEXT);")
 
         db.execSQL(CREATE_WORDS_TABLE)
     }
@@ -30,7 +31,7 @@ class MyDBHandler(context: Context, name: String?,
     fun addOrder(word: Order) {
         val values = ContentValues()
         values.put(COLUMN_WORD, word.client)
-        values.put(COLUMN_NAME, word.dish)
+        values.put(Name, word.dish)
 
         val db = this.writableDatabase
 
