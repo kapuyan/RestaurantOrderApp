@@ -38,8 +38,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun save(view: View) {
-        databaseHelper.addOrder(Order(wordToAddTxt.text.toString(), wordToAddTxt.text.toString()))
+        databaseHelper.addOrder(Order(wordToAddTxt.text.toString(), nameToAddTxt.text.toString()))
         wordToAddTxt.setText("")
+        nameToAddTxt.setText("")
         Toast.makeText(this@MainActivity, "Stored Successfully!", Toast.LENGTH_SHORT).show()
 
         wordsList = databaseHelper.getAllWords()

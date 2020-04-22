@@ -77,16 +77,6 @@
         app:layout_constraintTop_toBottomOf="@+id/wordToAdd" >
     </androidx.recyclerview.widget.RecyclerView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/nameList"
-        android:layout_width="407dp"
-        android:layout_height="191dp"
-        android:layout_marginTop="308dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameToAdd">
 
-    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

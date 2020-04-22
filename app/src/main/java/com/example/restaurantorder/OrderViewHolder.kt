@@ -10,7 +10,7 @@ class OrderViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
     fun bind (order: Order, clickListener: (String) -> Unit){
         itemView.nameTxt.text=order.client
         itemView.setOnClickListener{order.client?.let {it1 -> clickListener(it1)}}
-        itemView.dishTxt.text=order.client
+        itemView.dishTxt.text=order.dish
         itemView.setOnClickListener{order.dish?.let {it1 -> clickListener(it1)}}
     }
 

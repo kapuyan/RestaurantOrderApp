@@ -9,7 +9,7 @@ class MyDBHandler(context: Context, name: String?,
                   factory: SQLiteDatabase.CursorFactory?, version: Int) : SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
     companion object {
         private val DATABASE_VERSION = 3
-        private val DATABASE_NAME = "wordsDB.db"
+        private val DATABASE_NAME = "RestaurantClientDB.db"
         val TABLE_WORDS = "words_table"
         val COLUMN_ID = "_id"
         val COLUMN_WORD = "word"
@@ -51,7 +51,7 @@ class MyDBHandler(context: Context, name: String?,
 
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast) {
-                words.add(Order(cursor.getString(0),(cursor.getString(1))))
+                words.add(Order(cursor.getString(1),(cursor.getString(2))))
                 cursor.moveToNext()
             }
         }
